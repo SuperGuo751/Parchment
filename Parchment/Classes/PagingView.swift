@@ -73,7 +73,7 @@ open class PagingView: UIView {
         case .top:
             NSLayoutConstraint.activate([
                 collectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-                pageView.topAnchor.constraint(equalTo: topAnchor),
+                pageView.topAnchor.constraint(equalTo: options.viewIsFull ? topAnchor : collectionView.bottomAnchor),
                 pageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             ])
         case .bottom:

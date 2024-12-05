@@ -1,6 +1,10 @@
 import UIKit
 
 public struct PagingOptions {
+    
+    /// The view full. _Default: false
+    public var viewIsFull: Bool
+
     /// The size for each of the menu items. _Default:
     /// .sizeToFit(minWidth: 150, height: 40)_
     public var menuItemSize: PagingMenuItemSize
@@ -133,6 +137,7 @@ public struct PagingOptions {
     }
 
     public init() {
+        viewIsFull = false
         selectedScrollPosition = .preferCentered
         menuItemSize = .sizeToFit(minWidth: 150, height: 40)
         menuPosition = .top

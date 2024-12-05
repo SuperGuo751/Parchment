@@ -18,6 +18,12 @@ open class PagingViewController:
     PageViewControllerDelegate {
     // MARK: Public Properties
 
+    /// The view full. _Default: false
+    public var viewIsFull: Bool {
+        get { return options.viewIsFull }
+        set { options.viewIsFull = newValue }
+    }
+
     /// The size for each of the menu items. _Default:
     /// .sizeToFit(minWidth: 150, height: 40)_
     public var menuItemSize: PagingMenuItemSize {
@@ -289,7 +295,7 @@ open class PagingViewController:
     private var didLayoutSubviews: Bool = false
     private var didTransitionSize: Bool = false
 
-    private var pagingView: PagingView {
+    public var pagingView: PagingView {
         return view as! PagingView
     }
 
